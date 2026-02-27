@@ -9,7 +9,7 @@ curl -1sLf 'https://dl.cloudsmith.io/public/caddy/stable/debian.deb.txt' | sudo 
 sudo apt update && sudo apt install -y caddy
 
 # 3. Подтягивание конфига и заглушки (укажите ваш RAW URL)
-RAW_URL="https://raw.githubusercontent.com/liberty-56/fakesite/caddy-setup/main"
+RAW_URL="https://raw.githubusercontent.com/liberty-56/fakesite/main"
 
 curl -sL "$RAW_URL/Caddyfile" -o /etc/caddy/Caddyfile
 curl -sL "$RAW_URL/index.html" -o /srv/index.html

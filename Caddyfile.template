@@ -12,17 +12,19 @@
   }
   auto_https disable_redirects
 }
-https://.liberty-net.online {
+
+https://DOMAIN_PLACEHOLDER {
   root * /srv
   file_server
   log {
     output file /var/lib/caddy/access.log {
       roll_size 10mb
       roll_keep 5
+    }
   }
 }
-}
-http://.liberty-net.online {
+
+http://DOMAIN_PLACEHOLDER {
   bind 0.0.0.0
   redir https://{host}{uri} permanent
 }
